@@ -37,8 +37,8 @@ L Connector_Generic:Conn_01x40 J2
 U 1 1 5EF20436
 P 2500 2800
 F 0 "J2" H 2580 2792 50  0000 L CNN
-F 1 "Conn_01x40" H 2580 2701 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Horizontal" H 2500 2800 50  0001 C CNN
+F 1 "Conn_01x40" H 2580 2701 50  0001 L CNN
+F 2 "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical" H 2500 2800 50  0001 C CNN
 F 3 "~" H 2500 2800 50  0001 C CNN
 	1    2500 2800
 	1    0    0    -1  
@@ -170,10 +170,6 @@ Text GLabel 5900 1900 2    50   Input ~ 0
 TPS
 Wire Wire Line
 	5900 1900 5500 1900
-Text GLabel 1950 2200 0    50   Input ~ 0
-Clutch-in
-Wire Wire Line
-	1950 2200 2300 2200
 Text GLabel 4150 2200 0    50   Input ~ 0
 Clutch-in
 Wire Wire Line
@@ -199,8 +195,8 @@ $Comp
 L Device:D_Zener D1
 U 1 1 5EF423F6
 P 8350 3450
-F 0 "D1" V 8304 3530 50  0000 L CNN
-F 1 "D_Zener" V 8395 3530 50  0000 L CNN
+F 0 "D1" H 8300 3600 50  0000 L CNN
+F 1 "1N4732A" H 8050 3700 50  0000 L CNN
 F 2 "Diode_THT:D_5W_P12.70mm_Horizontal" H 8350 3450 50  0001 C CNN
 F 3 "~" H 8350 3450 50  0001 C CNN
 	1    8350 3450
@@ -218,7 +214,7 @@ L Connector:Screw_Terminal_01x03 J3
 U 1 1 5EF475EA
 P 8250 1400
 F 0 "J3" H 8330 1442 50  0000 L CNN
-F 1 "Screw_Terminal_01x03" H 8330 1351 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 8330 1351 50  0001 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 8250 1400 50  0001 C CNN
 F 3 "~" H 8250 1400 50  0001 C CNN
 	1    8250 1400
@@ -237,7 +233,7 @@ Wire Wire Line
 Wire Wire Line
 	7850 1400 8050 1400
 Text GLabel 7650 1500 0    50   Input ~ 0
-IAT
+TPS
 Wire Wire Line
 	7650 1500 8050 1500
 $Comp
@@ -245,7 +241,7 @@ L Connector:Screw_Terminal_01x02 J4
 U 1 1 5EF4DA57
 P 8250 1950
 F 0 "J4" H 8330 1942 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 8330 1851 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 8330 1851 50  0001 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal" H 8250 1950 50  0001 C CNN
 F 3 "~" H 8250 1950 50  0001 C CNN
 	1    8250 1950
@@ -272,4 +268,52 @@ F 3 "~" H 7900 1950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7900 1950 8050 1950
+Text GLabel 2050 2900 0    50   Input ~ 0
+O2
+Wire Wire Line
+	2050 2900 2300 2900
+Text GLabel 2050 3200 0    50   Input ~ 0
+Cam
+Wire Wire Line
+	2050 3200 2300 3200
+Text GLabel 1700 3300 0    50   Input ~ 0
+Crank
+Wire Wire Line
+	1700 3300 2300 3300
+$Comp
+L power:Earth #PWR?
+U 1 1 5EF32730
+P 6400 3100
+F 0 "#PWR?" H 6400 2850 50  0001 C CNN
+F 1 "Earth" H 6400 2950 50  0001 C CNN
+F 2 "" H 6400 3100 50  0001 C CNN
+F 3 "~" H 6400 3100 50  0001 C CNN
+	1    6400 3100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 3100 6050 3100
+Wire Wire Line
+	5500 3000 6050 3000
+Wire Wire Line
+	6050 3000 6050 3100
+Connection ~ 6050 3100
+Wire Wire Line
+	6050 3100 6400 3100
+Text GLabel 4000 3300 0    50   Input ~ 0
+Knock
+Wire Wire Line
+	4000 3300 4500 3300
+Text GLabel 1950 2500 0    50   Input ~ 0
+Tacho
+Wire Wire Line
+	1950 2500 2300 2500
+Text GLabel 2150 2300 0    50   Input ~ 0
+Fan
+Wire Wire Line
+	2150 2300 2300 2300
+Text GLabel 1700 2600 0    50   Input ~ 0
+Clutch-in
+Wire Wire Line
+	1700 2600 2300 2600
 $EndSCHEMATC
