@@ -316,4 +316,12 @@ Text GLabel 1700 2600 0    50   Input ~ 0
 Clutch-in
 Wire Wire Line
 	1700 2600 2300 2600
+Text GLabel 4300 2900 0    50   Input ~ 0
+Cam
+Text GLabel 3900 2800 0    50   Input ~ 0
+Crank
+Wire Wire Line
+	3900 2800 4500 2800
+Wire Wire Line
+	4300 2900 4500 2900
 $EndSCHEMATC
